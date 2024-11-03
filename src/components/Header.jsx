@@ -1,25 +1,32 @@
 // components/Header.js
 import React from 'react';
 import styled from 'styled-components';
+import { useNavigate } from "react-router-dom";
 
-const Header = () => (
-  <Nav>
-    <Logo>Smart Health</Logo>
+
+const Header = () => {
+const navigate = useNavigate();
+
+
+
+  return(<Nav>
+    <Logo  onClick={() => navigate('/')}>Smart Health</Logo>
     <NavLinks>
-      <HeaderTab href="#">About Us</HeaderTab>
+      <HeaderTab onClick={() => navigate('/about-us')}>About Us</HeaderTab>
       <HeaderTab href="#">Services</HeaderTab>
       <HeaderTab href="#">Careers</HeaderTab>
       <HeaderTab href="#">Contact</HeaderTab>
     </NavLinks>
 
     <Button>Join Now</Button>
-  </Nav>
-);
+  </Nav>)
+};
 
 const HeaderTab = styled.div`
-  font-size:20px;
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
+  font-family: Sans-serif;
 
   
 `
@@ -36,6 +43,7 @@ const Nav = styled.nav`
 const Logo = styled.h1`
   font-size: 30px;
   font-weight: bold;
+  cursor: pointer;
 `;
 
 const NavLinks = styled.div`
@@ -44,7 +52,7 @@ const NavLinks = styled.div`
     text-decoration: none;
     display: flex;
     flex-direction: row;
-    gap: 30px;
+    gap: 80px;
     
   
 `;

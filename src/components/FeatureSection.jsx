@@ -38,6 +38,7 @@ const FeatureText = styled.div`
   p {
     font-size: 1.1rem;
     margin-bottom: 20px;
+    font-family: cursive;
   }
 `;
 

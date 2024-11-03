@@ -31,11 +31,13 @@ const Image = styled.img`
 
 const FeatureText = styled.div`
   width: 50%;
+  font-family: cursive;
 
   h2 {
     font-size: 1.8rem;
     margin-bottom: 15px;
-    color: #1f3d5c
+    color: #1f3d5c;
+
   }
 
   p {
