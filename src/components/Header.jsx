@@ -1,7 +1,7 @@
-// components/Header.js
 import React from 'react';
 import styled from 'styled-components';
 import { useNavigate } from "react-router-dom";
+import LogoIcon from './Logo/LogoIcon';
 
 
 const Header = () => {
@@ -10,17 +10,24 @@ const navigate = useNavigate();
 
 
   return(<Nav>
-    <Logo  onClick={() => navigate('/')}>Smart Health</Logo>
+    <Logo  onClick={() => navigate('/')}>
+      <LogoIcon/>
+      <CompanyName>A1 Mercy Home And Personal Care</CompanyName>
+    </Logo>
     <NavLinks>
       <HeaderTab onClick={() => navigate('/about-us')}>About Us</HeaderTab>
-      <HeaderTab href="#">Services</HeaderTab>
-      <HeaderTab href="#">Careers</HeaderTab>
+      <HeaderTab onClick={() => navigate('/services')}>Services</HeaderTab>
       <HeaderTab href="#">Contact</HeaderTab>
     </NavLinks>
 
-    <Button>Join Now</Button>
+    <Button>Sign In</Button>
   </Nav>)
 };
+
+const CompanyName = styled.div`
+  font-family: Sans-serif;
+  font-size: 20px;
+`
 
 const HeaderTab = styled.div`
   font-size: 14px;
@@ -44,6 +51,10 @@ const Logo = styled.h1`
   font-size: 30px;
   font-weight: bold;
   cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 `;
 
 const NavLinks = styled.div`

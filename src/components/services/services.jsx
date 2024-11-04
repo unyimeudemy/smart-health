@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from '../header';
+import Footer from '../Footer';
 
 const MainContainer = styled.section`
   display: flex;
@@ -9,20 +11,19 @@ const MainContainer = styled.section`
   padding: 3rem 0;
 `;
 
-// Hero Section Styles
 const HeroText = styled.h2`
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #132639;
 `;
 
 const HeroDescription = styled.p`
   font-size: 1.2rem;
   max-width: 600px;
   line-height: 1.6;
-  color: #d3d3d3;
+  color: #132639;
 `;
 
-// Ask Section Styles
 const AskContainer = styled.div`
   margin: 2rem 0;
 `;
@@ -31,13 +32,12 @@ const AskQuestion = styled.div`
   display: inline-block;
   margin: 0.5rem;
   padding: 0.5rem 1rem;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #132639;
   border-radius: 5px;
   font-size: 1rem;
-  color: #d3d3d3;
+  color: #132639;
 `;
 
-// Info Section Styles
 const InfoContainer = styled.div`
   display: flex;
   justify-content: space-around;
@@ -47,12 +47,12 @@ const InfoContainer = styled.div`
 
 const InfoBox = styled.div`
   max-width: 300px;
-  color: #d3d3d3;
+  color: #132639;
   text-align: left;
 `;
 
 const InfoTitle = styled.h3`
-  color: #ffc107;
+  color: #ffbf00;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 `;
@@ -61,18 +61,17 @@ const InfoText = styled.p`
   line-height: 1.6;
 `;
 
-const MainContent = () => (
-  <MainContainer>
-    {/* Hero Section */}
+const Services = () => (
+  <>
+    <Header/>
+    <MainContainer>
     <HeroText>The best care. Period.</HeroText>
     <HeroDescription>
-      We combine medical expertise with expert software design to offer you
-      a care experience unlike any other. From Acne to Zenker’s Diverticulum,
-      we incorporate best-in-class clinical thinking with a thoughtful,
-      personalized approach.
+    We blend medical expertise with advanced software design to provide a unique,
+     tailored care experience. From everyday concerns to complex issues, we deliver
+      top-tier clinical insights with a thoughtful, personalized approach to meet your health needs.
     </HeroDescription>
 
-    {/* Ask Section */}
     <AskContainer>
       <AskQuestion>My allergies have been acting up with the change in weather. What do you recommend?</AskQuestion>
       <AskQuestion>My migraines seem to be getting worse. What can I do?</AskQuestion>
@@ -81,7 +80,6 @@ const MainContent = () => (
       <AskQuestion>Can you recommend a great therapist?</AskQuestion>
     </AskContainer>
 
-    {/* Info Section */}
     <InfoContainer>
       <InfoBox>
         <InfoTitle>Everyday Care</InfoTitle>
@@ -107,6 +105,8 @@ const MainContent = () => (
       </InfoBox>
     </InfoContainer>
   </MainContainer>
+  <Footer/>
+  </>
 );
 
-export default MainContent;
+export default Services;

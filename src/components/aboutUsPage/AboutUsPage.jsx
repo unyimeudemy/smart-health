@@ -4,6 +4,12 @@ import Header from '../header';
 import DoctorCard from './DoctorCard';
 import Footer from '../Footer';
 import PrincipleCard from './PrincipleCard';
+import officedesk from '../../images/officedesk.PNG'
+import maleDoctor from '../../images/maledoctor.PNG'
+import femaleDoctor from '../../images/femaledoctor.PNG'
+import cheapservice from '../../images/cheapservice.PNG'
+import standardhealth from '../../images/standardhealth.PNG'
+
 
 const AboutUsPage = () => {
   return (
@@ -13,66 +19,51 @@ const AboutUsPage = () => {
       <MainSection>
         <Content>
           <h1>A track record of innovation.</h1>
+          <div className=""></div>
+          <p>Smart Health is powered by innovators across healthcare, technology, and human-centered design,
+          with a team dedicated to making healthcare more accessible and affordable for all.</p>
           <p>
-            Our team is led by best-in-class innovators in healthcare, technology, 
-            and human-centered design.
-          </p>
-          <p>
-            Working with leading medical experts, we’re just beginning our journey 
-            to improve the quality and affordability of health care for all.
-          </p>
-          <p>
-            We became doctors to help people. Then we built Galileo to help us do it better.
+           Partnering with leading medical professionals, we’re on a journey to redefine what quality care can 
+           look like. We became doctors to help others, and Smart Health is here to help us make that 
+           impact even greater.
           </p>
         </Content>
-        <MainImage src="/path-to-main-image.jpg" alt="Innovation" />
+        <MainImage src={officedesk} />
       </MainSection>
 
-      <Section>
-        <h2>Our Story</h2>
-        <p>
-          Galileo was founded by Thomas Lee, MD, a Harvard-trained internist and pioneering 
-          innovator in healthcare. As head of One Medical for 14 years, Thomas helped to make 
-          in-person primary care work and expand across the nation.
-        </p>
-        {/* Additional paragraphs go here */}
-      </Section>
+      
 
       <Section>
-        <h2>Meet the doctors behind Galileo.</h2>
+        <h2>Meet the doctors behind Smart Health.</h2>
         <DoctorCards>
           <DoctorCard 
             name="Natalie Atabong, MD" 
+            image={femaleDoctor}
             description="Dr. Atabong received her doctorate degree from Stanford University and is a specialist in integrative medicine."
           />
           <DoctorCard 
             name="Andrew Cunningham, MD" 
+            image={maleDoctor}
             description="Dr. Cunningham specializes in internal medicine and has over 20 years of experience in healthcare."
           />
-          {/* Add more DoctorCard components here */}
         </DoctorCards>
       </Section>
 
       <Section>
-        <h2>We’re guided by 5 key principles.</h2>
+        <h2>Our North Star.</h2>
         <PrincipleCards>
           <PrincipleCard 
-            title="The power of a team" 
-            description="By working together, our clinicians deliver more comprehensive and insightful advice for patients."
+            title="Standard Health Service Focus" 
+            image={standardhealth}
+            description="Our North Star is to set the standard for quality in telemedicine, ensuring every patient receives expert, compassionate care with every visit."
           />
           <PrincipleCard 
-            title="A 360 Perspective" 
-            description="We view you and your health from a holistic perspective, considering all aspects of your life."
+            title="Reliable Health Service at Reasonable Cost Focus" 
+            image={cheapservice}
+            description="Our North Star is reliable, affordable healthcare for all. We’re committed to providing dependable care that fits your life and budget."
           />
-          {/* Add more PrincipleCard components here */}
         </PrincipleCards>
       </Section>
-
-      <Section>
-        <h2>Join our team.</h2>
-        <ViewCareersButton>View Careers</ViewCareersButton>
-      </Section>
-
       <Footer />
     </PageContainer>
   );

@@ -1,4 +1,3 @@
-// components/FeatureSection.js
 import React from 'react';
 import styled from 'styled-components';
 import virtualMeet from '../images/virtualMeet.PNG'

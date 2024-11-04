@@ -1,4 +1,3 @@
-// components/Footer.js
 import React from 'react';
 import styled from 'styled-components';
 import mainlogix from '../images/mainlogix.png';
@@ -6,7 +5,7 @@ import mainlogix from '../images/mainlogix.png';
 const Footer = () => (
   <FooterContainer>
     <LogoWrapper>
-      <Logo>Smart Health |</Logo>
+      <Logo>A1 Mercy Home And Personal Care |</Logo>
       <Mainlogix src={mainlogix} />
     </LogoWrapper>
   
@@ -35,7 +34,7 @@ const FooterContainer = styled.footer`
 
 const Logo = styled.h2`
   margin-bottom: 10px;
-  font-size: 32px;
+  font-size: 20px;
 `;
 
 const FooterLinks = styled.div`
